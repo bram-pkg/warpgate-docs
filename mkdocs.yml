@@ -1,0 +1,66 @@
+site_name: Warpgate
+site_author: Warp Technologies
+site_description: Securely expose your internal services to the internet
+site_url: https://docs.warpgate.dev
+
+repo_name: warp-tech/warpgate
+repo_url: https://github.com/warp-tech/warpgate
+
+theme:
+  name: material
+  logo: https://github.com/warp-tech/warpgate/raw/refs/heads/main/warpgate-web/public/assets/favicon.svg
+  favicon: https://github.com/warp-tech/warpgate/raw/refs/heads/main/warpgate-web/public/assets/favicon.svg
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: black
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  features:
+    - navigation.expand
+    
+
+nav:
+  - index.md
+  - Getting Started:
+      - Binary: getting-started/binary.md
+      - Docker: getting-started/docker.md
+  - Authentication:
+      - auth/user-authentication.md
+      - auth/mfa.md
+      - auth/tickets.md
+      - auth/sso.md
+  - Targets:
+      SSH: targets/ssh.md
+      HTTP: targets/http.md
+      MySQL: targets/mysql.md
+      PostgreSQL: targets/postgresql.md
+  - install-as-systemd-service.md
+  - chaining-warpgate.md
+  - protocol-support.md
+  - log-forwarding.md
+  - behind-reverse-proxy.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
