@@ -35,7 +35,6 @@ theme:
   features:
     - navigation.expand
     
-
 nav:
   - index.md
   - Getting Started:
